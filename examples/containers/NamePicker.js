@@ -37,7 +37,7 @@ var data = {
         {
           "hour": "3",
           "hour_slots": [{
-              ":00 PM": "slotId005"
+              ":00 PM": "slotId105"
             },
             {
               ":30 PM": "slotId007"
@@ -213,14 +213,16 @@ export default class NamePicker extends Component {
           dateArr.indexOf(this.state.valueGroupsOne.date)
         ].date_slots
       for(var i = 0; i < mArr.length; i++) {
-        // console.log("comp " + value[0]);
-        for(var j = 0; j < mArr[i].hour_slots.length; j++) {
-          // console.log(Object.keys(mArr[i].hour_slots[j])[0]);
-          if(Object.keys(mArr[i].hour_slots[j])[0] == value[0]) {
-            console.log(Object.values(mArr[i].hour_slots[j])[0]);
-            this.setState({
-              selectedId: Object.values(mArr[i].hour_slots[j])[0]
-            });
+        if(mArr[i].hour == this.state.valueGroupsTwo.hour) {
+          console.log(i, j);
+          for(var j = 0; j < mArr[i].hour_slots.length; j++) {
+            if(Object.keys(mArr[i].hour_slots[j])[0] == value[0]) {
+              console.log(Object.keys(mArr[i].hour_slots[j])[0], value[0]);
+              console.log(mArr[i].hour_slots[j]);
+              this.setState({
+                selectedId: Object.values(mArr[i].hour_slots[j])[0]
+              });
+            }
           }
         }
       }
