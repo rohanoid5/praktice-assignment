@@ -131,7 +131,10 @@ export default class NamePicker extends Component {
       hourArr.push(data.available_slots[dateArr.indexOf(value)].date_slots[j].hour);
     }
     if(hourArr.length > 0) {
-      for(var i = 0; i < 2; i++) {
+      for(var i = 0; i < data
+        .available_slots[dateArr.indexOf(value)]
+        .date_slots[0]
+        .hour_slots.legth; i++) {
         slotArr.push(Object.keys(data
           .available_slots[dateArr.indexOf(value)]
           .date_slots[0]

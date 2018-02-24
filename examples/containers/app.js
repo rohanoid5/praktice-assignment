@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import NamePicker from './NamePicker';
-import BirthPicker from './BirthPicker';
 
 export default class App extends Component {
   render() {
