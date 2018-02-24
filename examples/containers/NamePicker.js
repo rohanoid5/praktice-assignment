@@ -37,7 +37,7 @@ var data = {
         {
           "hour": "3",
           "hour_slots": [{
-              ":00 PM": "slotId005"
+              ":00 PM": "slotId0005"
             },
             {
               ":30 PM": "slotId007"
@@ -217,7 +217,6 @@ export default class NamePicker extends Component {
         for(var j = 0; j < mArr[i].hour_slots.length; j++) {
           // console.log(Object.keys(mArr[i].hour_slots[j])[0]);
           if(Object.keys(mArr[i].hour_slots[j])[0] == value[0]) {
-            console.log(Object.values(mArr[i].hour_slots[j])[0]);
             this.setState({
               selectedId: Object.values(mArr[i].hour_slots[j])[0]
             });
